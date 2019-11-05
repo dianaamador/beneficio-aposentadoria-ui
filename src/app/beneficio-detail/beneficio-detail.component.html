@@ -1,0 +1,49 @@
+<h3>Beneficio de Aposentadoria</h3>>
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="ui-g">
+    <div class="ui-g-12">
+        <h1>Beneficio de Aposentadoria</h1>
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+        <label>Nome</label>
+        <input name="nome" />
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+        <label>CPF</label>
+        <input name="cpf" />
+    </div>
+
+    <div class="ui-g-12 ui-fluid">
+        <label>Orgão</label>
+        <input name="orgao" />
+    </div>
+
+    <div class="ui-g-12 ui-fluid">
+        <label>Matricula</label>
+        <input name="matricula" />
+    </div>
+
+    <div class="ui-g-12 ui-fluid">
+        <label>Categoria</label>
+        <select name="categoria">
+        <option *ngFor="let categoria of categorias" value="{{categoria}}">
+            {{categoria}}
+        </option></select
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="file">Escolher Arquivo</label>
+        <input
+        type="file"
+        id="file"
+        (change)="handleFileInput($event.target.files)"
+        />
+    </div>
+
+    <div class="ui-g-12">
+        <button type="submit" label="Adicionar">SALVAR</button>
+    </div>
+</div>
